@@ -13,10 +13,11 @@ const { variant = 'filled', href, class: className } = Astro.props
   target="_blank"
   rel="noopener noreferrer"
   class:list={[
-    'inline-flex items-center justify-center gap-x-2 px-4 py-2 rounded-lg transition-colors w-32 md:w-36',
+    'inline-flex items-center justify-center gap-x-2 px-4 py-2 rounded-lg w-32 md:w-36',
+    'transition-all duration-300 ease-out hover:scale-105 active:scale-100',
     variant === 'filled' 
       ? 'bg-primary-light dark:bg-primary-dark text-white' 
-      : 'text-primary-light dark:text-primary-dark border border-primary-light dark:border-primary-dark hover:bg-primary-light/10 dark:hover:bg-primary-dark/10',
+      : 'text-primary-light dark:text-primary-dark border border-primary-light dark:border-primary-dark hover:bg-primary-light/5 dark:hover:bg-primary-dark/5',
     className
   ]}
 >

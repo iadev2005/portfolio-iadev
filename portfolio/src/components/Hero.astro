@@ -2,6 +2,7 @@
 import GitHub from '../icons/GitHub.astro';
 import LinkedIn from '../icons/LinkedIn.astro';
 import WhatsApp from '../icons/WhatsApp.astro';
+import Mail from '../icons/Mail.astro';
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-[1fr,auto] items-start gap-12 md:gap-16">
@@ -24,31 +25,44 @@ import WhatsApp from '../icons/WhatsApp.astro';
 
     <div class="flex gap-x-6 mt-8">
       <a 
-        href="#" 
+        href="https://github.com/iadev2005" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white transition-colors"
+        class="text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white transition-all duration-300 ease-out hover:scale-110 active:scale-100"
+        title="GitHub"
       >
         <span class="sr-only">GitHub</span>
         <GitHub class="w-7 h-7" />
       </a>
       <a 
-        href="#" 
+        href="https://www.linkedin.com/in/ignacio-aliendres-271082255" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white transition-colors"
+        class="text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white transition-all duration-300 ease-out hover:scale-110 active:scale-100"
+        title="LinkedIn"
       >
         <span class="sr-only">LinkedIn</span>
         <LinkedIn class="w-7 h-7" />
       </a>
       <a 
-        href="#" 
+        href="https://wa.me/584125849038" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white transition-colors"
+        class="text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white transition-all duration-300 ease-out hover:scale-110 active:scale-100"
+        title="WhatsApp"
       >
         <span class="sr-only">WhatsApp</span>
         <WhatsApp class="w-7 h-7" />
+      </a>
+      <a 
+        href="mailto:iadev0721@gmail.com" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white transition-all duration-300 ease-out hover:scale-110 active:scale-100"
+        title="Email"
+      >
+        <span class="sr-only">Email</span>
+        <Mail class="w-7 h-7" />
       </a>
     </div>
   </div>
