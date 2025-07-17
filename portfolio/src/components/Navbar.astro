@@ -1,0 +1,106 @@
+---
+import Container from "./Container.astro";
+import DarkMode from "../icons/DarkMode.astro";
+import LightMode from "../icons/LightMode.astro";
+import Menu from "../icons/Menu.astro";
+---
+
+<nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur dark:bg-black/80">
+  <Container>
+    <div class="flex h-16 items-center justify-between border-b border-black/10 dark:border-white/10">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-x-2">
+        <img 
+          src="/logo.jpg"
+          alt="Logo IADEV" 
+          class="h-8 w-8 rounded-full block dark:hidden"
+        />
+        <img 
+          src="/black-logo.jpg"
+          alt="Logo IADEV" 
+          class="h-8 w-8 rounded-full hidden dark:block"
+        />
+      </a>
+
+      <!-- Navigation -->
+      <ul class="hidden md:flex items-center gap-x-8 text-sm font-medium text-black/70 dark:text-white/70">
+        <li>
+          <a href="#start" class="transition hover:text-black dark:hover:text-white">Start</a>
+        </li>
+        <li>
+          <a href="#projects" class="transition hover:text-black dark:hover:text-white">My Projects</a>
+        </li>
+        <li>
+          <a href="#courses" class="transition hover:text-black dark:hover:text-white">My Courses</a>
+        </li>
+        <li>
+          <a href="#about" class="transition hover:text-black dark:hover:text-white">About Me</a>
+        </li>
+      </ul>
+
+      <div class="flex items-center gap-x-4">
+        <!-- Theme Toggle -->
+        <button 
+          id="theme-toggle"
+          class="rounded-lg p-2 text-black/70 transition hover:bg-black/10 hover:text-black dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white"
+        >
+          <span class="sr-only">Toggle theme</span>
+          <DarkMode class="hidden h-5 w-5 dark:block" />
+          <LightMode class="block h-5 w-5 dark:hidden" />
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button 
+          id="menu-toggle"
+          class="md:hidden rounded-lg p-2 text-black/70 transition hover:bg-black/10 hover:text-black dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white"
+        >
+          <span class="sr-only">Toggle menu</span>
+          <Menu class="h-5 w-5" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <ul class="flex flex-col py-4 text-sm font-medium text-black/70 dark:text-white/70">
+        <li>
+          <a href="#start" class="block py-2 transition hover:text-black dark:hover:text-white">Start</a>
+        </li>
+        <li>
+          <a href="#projects" class="block py-2 transition hover:text-black dark:hover:text-white">My Projects</a>
+        </li>
+        <li>
+          <a href="#courses" class="block py-2 transition hover:text-black dark:hover:text-white">My Courses</a>
+        </li>
+        <li>
+          <a href="#about" class="block py-2 transition hover:text-black dark:hover:text-white">About Me</a>
+        </li>
+      </ul>
+    </div>
+  </Container>
+</nav>
+
+<script>
+  const themeToggle = document.getElementById("theme-toggle");
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  
+  themeToggle?.addEventListener("click", () => {
+    const currentTheme = document.documentElement.classList.contains("dark") ? "light" : "dark";
+    document.documentElement.classList.toggle("dark");
+    
+    // Store in localStorage
+    localStorage.setItem("theme", currentTheme);
+  });
+
+  menuToggle?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("hidden");
+  });
+
+  // Close mobile menu when clicking on a link
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script> 

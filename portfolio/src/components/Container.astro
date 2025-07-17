@@ -1,0 +1,54 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class:list={[
+  // Base: padding mínimo para móviles
+  "px-6 mx-auto w-full",
+  // SM: tablets pequeñas
+  "sm:px-12",
+  // MD: tablets
+  "md:px-16",
+  // LG: laptops
+  "lg:px-32",
+  // XL: desktops
+  "xl:px-48 xl:max-w-[1800px]",
+  // 2XL: pantallas grandes
+  "2xl:px-64",
+  className
+]}>
+  <slot />
+</div>
+
+<!--
+  Guía de breakpoints y espaciado:
+  
+  - Móvil (<640px): 
+    - 1.5rem (24px) de padding en cada lado
+  
+  - SM (640px+): 
+    - 3rem (48px) de padding en cada lado
+  
+  - MD (768px+):
+    - 4rem (64px) de padding en cada lado
+  
+  - LG (1024px+):
+    - 8rem (128px) de padding en cada lado
+  
+  - XL (1280px+):
+    - 12rem (192px) de padding en cada lado
+    - Máximo ancho de 1800px para el contenido
+  
+  - 2XL (1536px+):
+    - 16rem (256px) de padding en cada lado
+    
+  Esto asegura:
+  1. El contenido sea legible en móviles
+  2. Un espacio muerto extremadamente generoso en pantallas grandes
+  3. Un diseño moderno y minimalista con mucho "aire"
+  4. Una experiencia visual impactante en pantallas grandes
+--> 

@@ -1,0 +1,80 @@
+/* Montserrat Regular */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/montserrat/Montserrat-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat Light */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/montserrat/Montserrat-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat Medium */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/montserrat/Montserrat-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat SemiBold */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/montserrat/Montserrat-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat Bold */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/montserrat/Montserrat-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat ExtraBold */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/montserrat/Montserrat-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat Black */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/montserrat/Montserrat-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat ExtraLight */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/montserrat/Montserrat-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat Thin */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/assets/fonts/montserrat/Montserrat-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+} 

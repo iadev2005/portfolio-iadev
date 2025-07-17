@@ -1,0 +1,67 @@
+---
+import CourseCard from './CourseCard.astro'
+import Html from '../icons/Html.astro'
+import Css from '../icons/Css.astro'
+import JavaScript from '../icons/JavaScript.astro'
+import TypeScript from '../icons/TypeScript.astro'
+
+const COURSES = [
+  {
+    title: 'HTML and CSS',
+    creator: '@soydalto',
+    duration: '24:01',
+    description: 'Comprehensive deep dive into modern web development fundamentals, focusing on semantic HTML5 and advanced CSS techniques for building responsive, accessible websites.',
+    image: '/course-html-css.jpg',
+    liveUrl: '#',
+    codeUrl: '#',
+    technologies: [
+      {
+        icon: Html,
+        name: 'HTML'
+      },
+      {
+        icon: Css,
+        name: 'CSS'
+      }
+    ]
+  },
+  {
+    title: 'JavaScript',
+    creator: '@soydalto',
+    duration: '27:20',
+    description: 'Advanced JavaScript course covering core concepts, modern ES6+ features, asynchronous programming, and practical application development through hands-on projects.',
+    image: '/course-js.jpg',
+    liveUrl: '#',
+    codeUrl: '#',
+    technologies: [
+      {
+        icon: JavaScript,
+        name: 'JavaScript'
+      }
+    ]
+  },
+  {
+    title: 'TypeScript',
+    creator: '@midudev',
+    duration: '03:16',
+    description: 'In-depth exploration of TypeScript, focusing on type safety, interfaces, generics, and best practices for building scalable applications with enhanced developer experience.',
+    image: '/course-ts.jpg',
+    liveUrl: '#',
+    codeUrl: '#',
+    technologies: [
+      {
+        icon: TypeScript,
+        name: 'TypeScript'
+      }
+    ]
+  }
+]
+---
+
+<div class="flex flex-col gap-y-24">
+  {
+    COURSES.map(course => (
+      <CourseCard {...course} />
+    ))
+  }
+</div> 

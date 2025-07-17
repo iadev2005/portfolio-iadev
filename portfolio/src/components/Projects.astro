@@ -1,0 +1,91 @@
+---
+import ProjectCard from './ProjectCard.astro'
+import Html from '../icons/Html.astro'
+import Css from '../icons/Css.astro'
+import TypeScript from '../icons/TypeScript.astro'
+import Tailwind from '../icons/Tailwind.astro'
+import React from '../icons/React.astro'
+import Java from '../icons/Java.astro'
+
+const PROJECTS = [
+  {
+    title: 'Arapaima',
+    description: 'An interactive web portal dedicated to promoting water conservation and cultural awareness in the Guayana region, featuring educational resources and community engagement tools.',
+    image: '/Arapaima.jpg',
+    liveUrl: '#',
+    codeUrl: '#',
+    technologies: [
+      {
+        icon: Html,
+        name: 'HTML'
+      },
+      {
+        icon: Css,
+        name: 'CSS'
+      },
+      {
+        icon: TypeScript,
+        name: 'TypeScript'
+      },
+      {
+        icon: Tailwind,
+        name: 'Tailwind'
+      },
+      {
+        icon: React,
+        name: 'React'
+      }
+    ]
+  },
+  {
+    title: 'Ecocrossing',
+    description: 'A multiplayer simulation game inspired by Animal Crossing, featuring real-time interactions through WebSocket technology and object-oriented design patterns.',
+    image: '/Ecocrossing.jpg',
+    liveUrl: '#',
+    codeUrl: '#',
+    technologies: [
+      {
+        icon: Java,
+        name: 'Java'
+      }
+    ]
+  },
+  {
+    title: 'Econotify',
+    description: 'A modern web application showcasing advanced programming paradigms, including aspect-oriented programming, asynchronous operations, and event-driven architecture.',
+    image: '/Econotify.jpg',
+    liveUrl: '#',
+    codeUrl: '#',
+    technologies: [
+      {
+        icon: Html,
+        name: 'HTML'
+      },
+      {
+        icon: Css,
+        name: 'CSS'
+      },
+      {
+        icon: TypeScript,
+        name: 'TypeScript'
+      },
+      {
+        icon: Tailwind,
+        name: 'Tailwind'
+      },
+      {
+        icon: React,
+        name: 'React'
+      }
+    ]
+  }
+]
+---
+
+<div class="flex flex-col gap-y-24">
+  {
+    PROJECTS.map(project => (
+      <ProjectCard {...project} />
+    ))
+  }
+</div> 

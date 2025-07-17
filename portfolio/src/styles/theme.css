@@ -1,0 +1,30 @@
+/* Variables del tema */
+:root {
+  /* Modo claro por defecto */
+  --tw-prose-text-primary: #1A1A1A;
+  --tw-prose-text-secondary: #333333;
+  --tw-prose-text-tertiary: #666666;
+  --tw-prose-text-muted: #999999;
+  --tw-prose-accent: #C6722F;
+  --tw-prose-bg: #FFFFFF;
+  --tw-prose-border: #CCCCCC;
+  --tw-prose-hover: #222222;
+}
+
+/* Modo oscuro */
+.dark {
+  --tw-prose-text-primary: #F8F8F8;
+  --tw-prose-text-secondary: #CCCCCC;
+  --tw-prose-text-tertiary: #999999;
+  --tw-prose-text-muted: #666666;
+  --tw-prose-accent: #D9A22F;
+  --tw-prose-bg: #000000;
+  --tw-prose-border: #333333;
+  --tw-prose-hover: #CCCCCC;
+
+  /* Variables para typography en modo oscuro */
+  --tw-prose-invert-body: var(--tw-prose-text-primary);
+  --tw-prose-invert-headings: var(--tw-prose-text-primary);
+  --tw-prose-invert-links: var(--tw-prose-accent);
+  --tw-prose-invert-bold: var(--tw-prose-text-primary);
+} 
