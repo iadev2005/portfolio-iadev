@@ -6,8 +6,8 @@ export default {
     extend: {
       colors: {
         primary: {
-          light: '#C6722F', // Color principal modo claro
-          dark: '#D9A22F',  // Color principal modo oscuro
+          light: '#944E0F', // Color principal modo claro más oscuro para mejor contraste
+          dark: '#FFB833',  // Color principal modo oscuro más brillante para mejor contraste
         },
         // Paleta modo claro
         light: {
@@ -18,7 +18,7 @@ export default {
             tertiary: '#666666',
             muted: '#999999',
           },
-          accent: '#C6722F',
+          accent: '#944E0F', // Actualizado para coincidir con primary.light
           border: '#CCCCCC',
           hover: '#222222',
         },
@@ -31,7 +31,7 @@ export default {
             tertiary: '#999999',
             muted: '#666666',
           },
-          accent: '#D9A22F',
+          accent: '#FFB833', // Actualizado para coincidir con primary.dark
           border: '#333333',
           hover: '#CCCCCC',
         },
