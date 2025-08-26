@@ -68,11 +68,18 @@ import Mail from '../icons/Mail.astro';
   </div>
 
   {/* Avatar */}
-  <div class="relative aspect-square w-full max-w-[300px] md:w-[280px] lg:w-[300px] mx-auto md:mx-0">
+  <div class="relative aspect-square w-full max-w-[300px] md:w-[280px] lg:w-[300px] mx-auto md:mx-0 group">
+    {/* Imagen Real */}
+    <img
+      src="/profile.jpeg"
+      alt="Ignacio D. Aliendres - Foto Real"
+      class="w-full h-full object-cover rounded-2xl transition-all duration-700 ease-in-out group-hover:opacity-0 group-hover:scale-110"
+    />
+    {/* Imagen Animada */}
     <img
       src="/avatar.jpg"
-      alt="Ignacio D. Aliendres"
-      class="w-full h-full object-cover rounded-2xl"
+      alt="Ignacio D. Aliendres - Versión Animada"
+      class="absolute inset-0 w-full h-full object-cover rounded-2xl transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100 group-hover:scale-105"
     />
   </div>
 </div> 
