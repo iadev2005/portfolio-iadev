@@ -1,91 +1,185 @@
 ---
-import ProjectCard from './ProjectCard.astro'
-import Html from '../icons/Html.astro'
-import Css from '../icons/Css.astro'
-import TypeScript from '../icons/TypeScript.astro'
-import Tailwind from '../icons/Tailwind.astro'
-import React from '../icons/React.astro'
-import Java from '../icons/Java.astro'
+import ProjectCard from "./ProjectCard.astro";
+import Html from "../icons/Html.astro";
+import Css from "../icons/Css.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import React from "../icons/React.astro";
+import Java from "../icons/Java.astro";
+import Kotlin from "../icons/Kotlin.astro";
+import Next from "../icons/Next.astro";
+import Express from "../icons/Express.astro";
+import Postgresql from "../icons/Postgresql.astro";
+import Node from "../icons/Node.astro";
+import Supabase from "../icons/Supabase.astro";
+import Python from "../icons/Python.astro";
 
 const PROJECTS = [
   {
-    title: 'Arapaima',
-    description: 'Un portal web interactivo dedicado a promover la conservación del agua y la conciencia cultural en la región de Guayana, con recursos educativos y herramientas de participación comunitaria.',
-    image: '/Arapaima.jpg',
-    liveUrl: 'https://ihc-arapaima.vercel.app/',
-    codeUrl: 'https://github.com/iadev2005/IHC-Arapaima',
+    title: "PolkaEdu",
+    description:
+      "Plataforma educativa Web3 desarrollada para la Hackathon de Polkadot (ganadora del premio local TpLink Guayana). Emisión de certificados NFT por cursos completados, con transacciones vía wallet.",
+    image: "/PolkaEdu.png",
+    liveUrl: "https://polkaedu.netlify.app/",
+    codeUrl: "https://github.com/iadev2005/PolkaEdu",
+    tags: ["Desplegado", "Hackathon", "Web3", "Next.js"],
     technologies: [
       {
-        icon: Html,
-        name: 'HTML'
+        icon: Next,
+        name: "Next.js",
       },
       {
-        icon: Css,
-        name: 'CSS'
+        icon: Express,
+        name: "Express.js",
       },
       {
         icon: TypeScript,
-        name: 'TypeScript'
+        name: "TypeScript",
       },
       {
         icon: Tailwind,
-        name: 'Tailwind'
+        name: "Tailwind",
+      },
+    ],
+  },
+  {
+    title: "Clinicas Juridicas",
+    description:
+      "Gestor de casos legales para la Escuela de Derecho de la UCAB. Incluye gestión de solicitantes, citas y roles, con una base de datos robusta en 3FN.",
+    image: "/ClinicaJuridica.png",
+    liveUrl: "https://legal-clinic-manager.vercel.app/",
+    codeUrl: "https://github.com/iadev2005/legal-clinic-manager",
+    docsUrl:
+      "https://docs.google.com/document/d/1PEKAxWiNyjkVWMyXuiF-33GEu8SD46T3he8yRGbA1Ro/edit?tab=t.0",
+    tags: ["Desplegado", "Documentado", "Fullstack", "Next.js"],
+    technologies: [
+      {
+        icon: Next,
+        name: "Next.js",
+      },
+      {
+        icon: Express,
+        name: "Express.js",
+      },
+      {
+        icon: Postgresql,
+        name: "PostgreSQL",
+      },
+      {
+        icon: TypeScript,
+        name: "TypeScript",
+      },
+      {
+        icon: Tailwind,
+        name: "Tailwind",
+      },
+    ],
+  },
+  {
+    title: "DecorAR",
+    description:
+      "Aplicación móvil de Realidad Aumentada para Home Staging. Permite visualizar muebles 3D en espacios reales, con recomendaciones por IA y funcionamiento offline-first.",
+    image: "/DecorAR.png",
+    codeUrl: "https://github.com/DanielCarrenoMar/Decor-AR",
+    docsUrl:
+      "https://docs.google.com/document/d/1khnqkbwzQh9KSDlaJPlPC_IEAkLZ6DJBbwPJnruazgs/edit?tab=t.0",
+    tags: ["Documentado", "Mobile", "Kotlin"],
+    technologies: [
+      {
+        icon: Kotlin,
+        name: "Kotlin",
+      },
+    ],
+  },
+  {
+    title: "Arapaima",
+    description:
+      "Un portal web interactivo dedicado a promover la conservación del agua y la conciencia cultural en la región de Guayana, con recursos educativos y herramientas de participación comunitaria.",
+    image: "/Arapaima.jpg",
+    codeUrl: "https://github.com/iadev2005/IHC-Arapaima",
+    docsUrl:
+      "https://docs.google.com/document/d/1Dk7Kr28oAOrCFxmDG3GFDtsS-DU_WOvvGvtZKivXx-E/edit?tab=t.0",
+    tags: ["Documentado", "Frontend"],
+    technologies: [
+      {
+        icon: Html,
+        name: "HTML",
+      },
+      {
+        icon: Css,
+        name: "CSS",
+      },
+      {
+        icon: TypeScript,
+        name: "TypeScript",
+      },
+      {
+        icon: Tailwind,
+        name: "Tailwind",
       },
       {
         icon: React,
-        name: 'React'
-      }
-    ]
+        name: "React",
+      },
+    ],
   },
   {
-    title: 'Ecocrossing',
-    description: 'Un juego de simulación multijugador inspirado en Animal Crossing, con interacciones en tiempo real a través de tecnología WebSocket y patrones de diseño orientado a objetos.',
-    image: '/Ecocrossing.jpg',
-    liveUrl: '',
-    codeUrl: 'https://github.com/iadev2005/EcoCrossing',
+    title: "Ecocrossing",
+    description:
+      "Un juego de simulación multijugador inspirado en Animal Crossing, con interacciones en tiempo real a través de tecnología WebSocket y patrones de diseño orientado a objetos.",
+    image: "/Ecocrossing.jpg",
+    codeUrl: "https://github.com/iadev2005/EcoCrossing",
+    docsUrl:
+      "https://docs.google.com/document/d/1nI8_ong49OEtThHS6aoz5HUhuyJvru4OQyoJuF0zlPU/edit?tab=t.0",
+    tags: ["Documentado", "Backend", "Java"],
     technologies: [
       {
         icon: Java,
-        name: 'Java'
-      }
-    ]
+        name: "Java",
+      },
+    ],
   },
   {
-    title: 'Econotify',
-    description: 'Una aplicación web moderna que muestra paradigmas de programación avanzados, incluyendo programación orientada a aspectos, operaciones asíncronas y arquitectura dirigida por eventos.',
-    image: '/Econotify.jpg',
-    liveUrl: 'https://econotificaciones.vercel.app/',
-    codeUrl: 'https://github.com/iadev2005/Econotificaciones',
+    title: "PymeUp",
+    description:
+      "CRM para gestión de inventario, publicaciones automatizadas con IA (Meta API) y generación de sitios para PYMES. Ganador de Hackathon Uneg (grupo cudicoders).",
+    image: "/PymeUp.png",
+    codeUrl: "https://github.com/iadev2005/UcaBytes",
+    tags: ["Hackathon", "Backend", "AI", "React"],
     technologies: [
       {
-        icon: Html,
-        name: 'HTML'
-      },
-      {
-        icon: Css,
-        name: 'CSS'
-      },
-      {
-        icon: TypeScript,
-        name: 'TypeScript'
-      },
-      {
-        icon: Tailwind,
-        name: 'Tailwind'
+        icon: Python,
+        name: "Python",
       },
       {
         icon: React,
-        name: 'React'
-      }
-    ]
-  }
-]
+        name: "React",
+      },
+      {
+        icon: Express,
+        name: "Express.js",
+      },
+      {
+        icon: Next,
+        name: "Next.js",
+      },
+      {
+        icon: Node,
+        name: "Node.js",
+      },
+      {
+        icon: Tailwind,
+        name: "Tailwind",
+      },
+      {
+        icon: Supabase,
+        name: "Supabase",
+      },
+    ],
+  },
+];
 ---
 
 <div class="flex flex-col gap-y-24">
-  {
-    PROJECTS.map(project => (
-      <ProjectCard {...project} />
-    ))
-  }
-</div> 
+  {PROJECTS.map((project) => <ProjectCard {...project} />)}
+</div>

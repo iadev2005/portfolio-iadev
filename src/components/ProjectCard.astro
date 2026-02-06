@@ -1,69 +1,112 @@
 ---
-import Button from './Button.astro';
-import Code from '../icons/Code.astro';
-import Play from '../icons/Play.astro';
+import Button from "./Button.astro";
+import Code from "../icons/Code.astro";
+import Play from "../icons/Play.astro";
+import Documentation from "../icons/Documentation.astro";
+import Tag from "./Tag.astro";
 
 interface Props {
-  title: string
-  description: string
-  image: string
-  liveUrl?: string
-  codeUrl?: string
+  title: string;
+  description: string;
+  image: string;
+  liveUrl?: string;
+  codeUrl?: string;
+  docsUrl?: string;
   technologies: Array<{
-    icon: any
-    name: string
-  }>
+    icon: any;
+    name: string;
+  }>;
+  tags?: string[];
 }
 
-const { 
-  title, 
-  description, 
-  image, 
-  liveUrl, 
+const {
+  title,
+  description,
+  image,
+  liveUrl,
   codeUrl,
-  technologies 
+  docsUrl,
+  technologies,
+  tags = [],
 } = Astro.props;
 ---
 
 <article class="grid grid-cols-1 md:grid-cols-[1fr,1fr] gap-8 md:gap-16">
-  <div class="flex flex-col">
-    <img 
-      src={image} 
+  <div class="flex flex-col gap-4">
+    <img
+      src={image}
       alt={`Captura de pantalla del proyecto ${title}`}
-      class="rounded-2xl aspect-video object-cover w-full"
+      class="rounded-2xl aspect-video object-cover w-full shadow-lg transition-transform duration-500 hover:scale-[1.02]"
     />
   </div>
 
   <div class="flex flex-col items-start">
-    <h3 class="text-2xl font-semibold">{title}</h3>
-    
-    <p class="text-base text-black/70 dark:text-white/70 mt-4">
+    <div class="flex flex-col gap-2 w-full">
+      <div class="flex flex-wrap gap-2 mb-2">
+        {
+          tags.map((tag) => {
+            let variant: "default" | "success" | "info" | "warning" = "default";
+            const lowerTag = tag.toLowerCase();
+
+            if (lowerTag.includes("desplegado")) variant = "success";
+            else if (lowerTag.includes("documentado")) variant = "info";
+            else if (
+              lowerTag.includes("desarrollo") ||
+              lowerTag.includes("wip")
+            )
+              variant = "warning";
+
+            return <Tag text={tag} variant={variant} />;
+          })
+        }
+      </div>
+      <h3 class="text-2xl font-semibold text-black dark:text-white">{title}</h3>
+    </div>
+
+    <p class="text-base text-black/70 dark:text-white/70 mt-4 leading-relaxed">
       {description}
     </p>
 
-    <div class="flex gap-x-4 mt-8">
-      {liveUrl && (
-        <Button href={liveUrl}>
-          Demo
-          <Play class="size-5" />
-        </Button>
-      )}
-      
-      {codeUrl && (
-        <Button href={codeUrl} variant="outline">
-          Código
-          <Code class="size-5" />
-        </Button>
-      )}
+    <div class="flex flex-wrap gap-4 mt-8">
+      {
+        liveUrl && (
+          <Button href={liveUrl}>
+            Demo
+            <Play class="size-5" />
+          </Button>
+        )
+      }
+
+      {
+        codeUrl && (
+          <Button href={codeUrl} variant="outline">
+            Código
+            <Code class="size-5" />
+          </Button>
+        )
+      }
+
+      {
+        docsUrl && (
+          <Button href={docsUrl} variant="monochrome">
+            Informe
+            <Documentation class="size-5" />
+          </Button>
+        )
+      }
     </div>
 
-    <footer class="flex gap-x-4 mt-8">
-      {technologies.map(tech => (
-        <tech.icon 
-          class="size-8 text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white transition-colors" 
-          title={tech.name}
-        />
-      ))}
+    <footer
+      class="flex flex-wrap gap-4 mt-8 pt-4 border-t border-black/10 dark:border-white/10 w-full"
+    >
+      {
+        technologies.map((tech) => (
+          <tech.icon
+            class="size-8 text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white transition-colors"
+            title={tech.name}
+          />
+        ))
+      }
     </footer>
   </div>
-</article> 
+</article>

@@ -1,11 +1,11 @@
 ---
 interface Props {
-  variant?: 'filled' | 'outline'
-  href: string
-  class?: string
+  variant?: "filled" | "outline" | "monochrome";
+  href: string;
+  class?: string;
 }
 
-const { variant = 'filled', href, class: className } = Astro.props
+const { variant = "filled", href, class: className } = Astro.props;
 ---
 
 <a
@@ -13,13 +13,15 @@ const { variant = 'filled', href, class: className } = Astro.props
   target="_blank"
   rel="noopener noreferrer"
   class:list={[
-    'inline-flex items-center justify-center gap-x-2 px-4 py-2 rounded-lg w-32 md:w-36',
-    'transition-all duration-300 ease-out hover:scale-105 active:scale-100',
-    variant === 'filled' 
-      ? 'bg-primary-light dark:bg-primary-dark text-white' 
-      : 'text-primary-light dark:text-primary-dark border border-primary-light dark:border-primary-dark hover:bg-primary-light/5 dark:hover:bg-primary-dark/5',
-    className
+    "inline-flex items-center justify-center gap-x-2 px-4 py-2 rounded-lg w-28 md:w-32 text-sm md:text-base",
+    "transition-all duration-300 ease-out hover:scale-105 active:scale-100",
+    variant === "filled" && "bg-primary-light dark:bg-primary-dark text-white",
+    variant === "outline" &&
+      "text-primary-light dark:text-primary-dark border border-primary-light dark:border-primary-dark hover:bg-primary-light/5 dark:hover:bg-primary-dark/5",
+    variant === "monochrome" &&
+      "bg-white text-black border border-black hover:bg-black/5 dark:bg-black dark:text-white dark:border-white dark:hover:bg-white/10",
+    className,
   ]}
 >
   <slot />
-</a> 
+</a>

@@ -4,6 +4,9 @@ import Html from '../icons/Html.astro'
 import Css from '../icons/Css.astro'
 import JavaScript from '../icons/JavaScript.astro'
 import TypeScript from '../icons/TypeScript.astro'
+import Python from '../icons/Python.astro'
+import Postgresql from '../icons/Postgresql.astro'
+import React from '../icons/React.astro'
 
 const COURSES = [
   {
@@ -14,6 +17,7 @@ const COURSES = [
     image: '/course-html-css.jpg',
     liveUrl: 'https://www.youtube.com/watch?v=ELSm-G201Ls',
     codeUrl: 'https://github.com/iadev2005/Curso-HTML-CSS-Soy-Dalto',
+    tags: ['Frontend', 'Fundamentos'],
     technologies: [
       {
         icon: Html,
@@ -33,10 +37,59 @@ const COURSES = [
     image: '/course-js.jpg',
     liveUrl: 'https://www.youtube.com/playlist?list=PLE8uP447fYpiBqMVF1hdWl9uFeVEeXRTm',
     codeUrl: 'https://github.com/iadev2005/Curso-JS-Soy-Dalto',
+    tags: ['Frontend', 'Backend', 'Lenguaje'],
     technologies: [
       {
         icon: JavaScript,
         name: 'JavaScript'
+      }
+    ]
+  },
+  {
+    title: 'Python',
+    creator: '@soydalto',
+    duration: '08:06',
+    description: 'Curso completo de Python desde cero, cubriendo fundamentos, estructuras de datos, programación orientada a objetos y módulos.',
+    image: '/course-python.png',
+    liveUrl: 'https://www.youtube.com/watch?v=nKPbfIU442g',
+    codeUrl: 'https://github.com/iadev2005/Curso-Python-Soy-Dalto',
+    tags: ['Backend', 'Fundamentos', 'Lenguaje'],
+    technologies: [
+      {
+        icon: Python,
+        name: 'Python'
+      }
+    ]
+  },
+  {
+    title: 'Base de Datos',
+    creator: '@gypz',
+    duration: '07:12',
+    description: 'Fundamentos sólidos de bases de datos relacionales y SQL, con demostraciones prácticas utilizando el motor PostgreSQL.',
+    image: '/course-postgresql.png',
+    liveUrl: 'https://www.youtube.com/watch?v=voucOjOcpk8&t=12s',
+    codeUrl: 'https://github.com/iadev2005/Curso-Base-de-Datos-GYPZ',
+    tags: ['Backend', 'Base de Datos'],
+    technologies: [
+      {
+        icon: Postgresql,
+        name: 'PostgreSQL'
+      }
+    ]
+  },
+  {
+    title: 'React',
+    creator: '@midudev',
+    duration: '02:24',
+    description: 'Introducción práctica a React para el desarrollo de interfaces de usuario modernas, interactivas y basadas en componentes.',
+    image: '/course-react.png',
+    liveUrl: 'https://www.youtube.com/watch?v=7iobxzd_2wY&t=5s',
+    codeUrl: 'https://github.com/iadev2005/Curso-React',
+    tags: ['Frontend', 'Framework'],
+    technologies: [
+      {
+        icon: React,
+        name: 'React'
       }
     ]
   },
@@ -48,6 +101,7 @@ const COURSES = [
     image: '/course-ts.jpg',
     liveUrl: 'https://www.youtube.com/watch?v=fUgxxhI_bvc&list=PLbXiiIWYBP_-ysp5NroS6uU8hmX6rzwkE&pp=gAQB',
     codeUrl: 'https://github.com/iadev2005/Curso-TypeScript',
+    tags: ['FullStack', 'Tipado'],
     technologies: [
       {
         icon: TypeScript,

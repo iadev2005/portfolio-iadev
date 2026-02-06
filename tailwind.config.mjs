@@ -6,7 +6,7 @@ export default {
     extend: {
       colors: {
         primary: {
-          light: '#944E0F', // Color principal modo claro más oscuro para mejor contraste
+          light: '#2563EB', // Blue-600: Vibrant and accessible blue
           dark: '#FFB833',  // Color principal modo oscuro más brillante para mejor contraste
         },
         // Paleta modo claro
@@ -18,7 +18,7 @@ export default {
             tertiary: '#666666',
             muted: '#999999',
           },
-          accent: '#944E0F', // Actualizado para coincidir con primary.light
+          accent: '#2563EB', // Actualizado para coincidir con primary.light
           border: '#CCCCCC',
           hover: '#222222',
         },

@@ -1,10 +1,11 @@
----
----
-
 <div class="fixed inset-0 -z-10 h-full w-full">
-  {/* Fondo para modo claro */}
-  <div class="absolute inset-0 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#C6722F_100%)] dark:opacity-0 transition-opacity"></div>
+  {/* Fondo para modo claro: Blanco minimalista con un sutil destello azul superior */}
+  <div class="absolute inset-0 h-full w-full bg-white dark:opacity-0 transition-opacity duration-500">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-blue-100/50 blur-[100px] rounded-full mix-blend-multiply"></div>
+  </div>
   
-  {/* Fondo para modo oscuro */}
-  <div class="absolute inset-0 h-full w-full opacity-0 dark:opacity-100 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#D9A22F_100%)] transition-opacity"></div>
+  {/* Fondo para modo oscuro: Negro profundo con un sutil destello dorado superior */}
+  <div class="absolute inset-0 h-full w-full bg-[#050505] opacity-0 dark:opacity-100 transition-opacity duration-500">
+     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-primary-dark/20 blur-[120px] rounded-full"></div>
+  </div>
 </div> 
